@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/TopGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/LeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/RightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/BottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="30dp" />
+
+    <TextView
+        android:id="@+id/lblTitulo"
+        android:text="Registro"
+        android:textSize="36sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/TopGuideline"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/RightGuideline" />
+
+    <ImageView
+        android:id="@+id/imgNombre"
+        android:src="@drawable/ic_person"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/lblTitulo"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/lblTitulo"
+        app:layout_constraintStart_toEndOf="@id/imgNombre"
+        app:layout_constraintEnd_toEndOf="@id/RightGuideline" />
+
+    <ImageView
+        android:id="@+id/imgApellido"
+        android:src="@drawable/ic_person"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imgNombre"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline" />
+
+    <EditText
+        android:id="@+id/txtApellido"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgNombre"
+        app:layout_constraintStart_toEndOf="@id/imgApellido"
+        app:layout_constraintEnd_toEndOf="@id/RightGuideline" />
+
+    <ImageView
+        android:id="@+id/imgEmail"
+        android:src="@drawable/ic_email"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imgApellido"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgApellido"
+        app:layout_constraintStart_toEndOf="@id/imgEmail"
+        app:layout_constraintEnd_toEndOf="@id/RightGuideline" />
+
+    <ImageView
+        android:id="@+id/imgGenero"
+        android:src="@drawable/ic_genero"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imgEmail"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline" />
+
+    <Spinner
+        android:id="@+id/comGenero"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgEmail"
+        app:layout_constraintStart_toEndOf="@id/imgGenero"
+        app:layout_constraintEnd_toEndOf="@id/RightGuideline" >
+    </Spinner>
+
+    <ImageView
+        android:id="@+id/imgContraseña"
+        android:src="@drawable/ic_password"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imgGenero"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline" />
+
+    <EditText
+        android:id="@+id/txtContraseña"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgGenero"
+        app:layout_constraintStart_toEndOf="@id/imgContraseña"
+        app:layout_constraintEnd_toEndOf="@id/RightGuideline" />
+
+    <ImageView
+        android:id="@+id/imgContraseña2"
+        android:src="@drawable/ic_password"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imgContraseña"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline" />
+
+    <EditText
+        android:id="@+id/txtContraseña2"
+        android:hint="Confirmar contraseña"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgContraseña"
+        app:layout_constraintStart_toEndOf="@id/imgContraseña2"
+        app:layout_constraintEnd_toEndOf="@id/RightGuideline" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:text="Enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/BottomGuideline"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/RightGuideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
